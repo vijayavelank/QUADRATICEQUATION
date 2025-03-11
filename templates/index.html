@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quadratic Equation Solver</title>
+</head>
+<body>
+    <h1>Quadratic Equation Solver</h1>
+    <form method="POST">
+        <label for="a">a:</label>
+        <input type="text" id="a" name="a" value=""><br><br>
+        <label for="b">b:</label>
+        <input type="text" id="b" name="b" value=""><br><br>
+        <label for="c">c:</label>
+        <input type="text" id="c" name="c" value=""><br><br>
+        <input type="submit" value="Solve">
+    </form>
+
+    {% if result %}
+        <p>Result: {{ result }}</p>
+    {% elif error_message %}
+        <p style="color:red;">Error: {{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
